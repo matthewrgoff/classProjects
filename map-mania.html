@@ -1,0 +1,25 @@
+<!-- 
+Author: Matt Goff
+Class: Web & Distributed Programming
+Project: Map Mania V1
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+        <meta charset="UTF-8">
+        <title>Map Mania V1</title>
+        <script src="map-mania.js"></script>
+        <link rel="stylesheet" href="map-mania.css"> 
+    </head>
+    <body onload="initApplication()">
+        <h1>Matt's Favorite Places to Visit Game</h1>        
+        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
+
+        <div id="myMapID"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwD7oQNgEOBWaOZTCmS61HfhQL04rbyjw&callback=initMap"
+		async defer></script>
+    </body>
+</html>
