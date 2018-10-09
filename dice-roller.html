@@ -1,0 +1,58 @@
+<!--
+Author: Matt Goff
+Class: Web & Distributed Programming
+Project: Dice Roller Game
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+        <meta charset="UTF-8">
+        <title>Dice Roller</title>
+        <script src="dice-roller.js"></script>
+        <link rel="stylesheet" href="dice-roller.css"> 
+    </head>
+	
+	<!-- automatically rolls the dice -->
+	<body onload="RollSixSidedDice()">
+		<h1>Yahtzee</h1>
+		<p>Instructions: Your objective in this game is to roll five dice <br>
+		and make certain combinations. The dice can be rolled up to three <br>
+		times in one round. You can hold dice at their current value to <br>
+		help make combinations.</p>
+		
+		<!-- focuses on roll button -->
+		<button type="button" autofocus onclick="RollSixSidedDice()">Roll Dice</button><br><br>
+        Dice 1: <input id="dice1" type="text" value="" size="5" disabled><br><br>
+		Dice 2: <input id="dice2" type="text" value="" size="5" disabled><br><br>
+		Dice 3: <input id="dice3" type="text" value="" size="5" disabled><br><br>
+		Dice 4: <input id="dice4" type="text" value="" size="5" disabled><br><br>
+		Dice 5: <input id="dice5" type="text" value="" size="5" disabled><br><br>
+		
+		<form>
+			<input type="checkbox" name="hold1" value="Hold1"> Hold 1
+			<input type="checkbox" name="hold2" value="Hold2"> Hold 2
+			<input type="checkbox" name="hold3" value="Hold3"> Hold 3
+			<input type="checkbox" name="hold4" value="Hold4"> Hold 4
+			<input type="checkbox" name="hold5" value="Hold5"> Hold 5<br><br>
+		</form>
+		
+		<button type="button" onclick="SetScore()">1s</button>
+		<button type="button" onclick="SetScore()">2s</button>
+		<button type="button" onclick="SetScore()">3s</button>
+		<button type="button" onclick="SetScore()">4s</button>
+		<button type="button" onclick="SetScore()">5s</button>
+		<button type="button" onclick="SetScore()">6s</button><br><br>
+		<button type="button" onclick="SetScore()">3 of a Kind</button>
+		<button type="button" onclick="SetScore()">4 of a Kind</button>
+		<button type="button" onclick="SetScore()">Full House</button>
+		<button type="button" onclick="SetScore()">Small Straight</button>
+		<button type="button" onclick="SetScore()">Large Straight</button>
+		<button type="button" onclick="SetScore()">Chance</button>
+		<button type="button" onclick="SetScore()">Yahtzee</button><br><br>
+		
+		Score:<p id="mathResultsID"></p>
+	</body>
+	
+</html>
