@@ -1,0 +1,43 @@
+<!-- 
+Author: Matt Goff
+Class: Web & Distributed Programming
+Project: Map Mania V2
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+        <meta charset="UTF-8">
+        <title>Map Mania V2</title>
+        <script src="map-maniav2.js"></script>
+        <link rel="stylesheet" href="map-maniav2.css"> 
+    </head>
+    <body onload="openHelp()">
+        <h1>Matt's Favorite Places to Visit Game</h1>        
+        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
+		
+		<button onclick="openHelp()" id="myBtn">Open Help</button>
+		<div id="helpID" class="help">
+			<div class="help-content">
+				<span onclick="closeHelp()" class="close">&times;</span>
+				<h2>Map Mania Game Instructions</h2>
+				<p>Open the developer tools to check the console.</p>
+				<p>The object of this game is to zoom in anywhere on the map<br>
+				and find my favorite places. The console will tell you if you are in bounds.</p>
+				<p>When you find one, you will recieve a point and click reset map when you are ready.</p>
+				<p>Click win now if you don't want to play.</p>
+				<button onclick="closeHelp()" >Close Help</button>
+			</div>
+		</div>
+		
+		<button onclick="initMap()">Reset Map</button>
+		<button onclick="winNow()">Win Now</button>
+
+        <div id="myMapID"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwD7oQNgEOBWaOZTCmS61HfhQL04rbyjw&callback=initMap"
+		async defer></script>
+
+    </body>
+</html>
