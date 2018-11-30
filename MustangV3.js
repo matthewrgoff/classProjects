@@ -24,37 +24,37 @@ function viewCurrentContact() {
 	statusUpdate();
 }
 
-saveContacts() {
-//	console.log("saveContacts()");
-//   xmlhttp = new XMLHttpRequest();
-//	xmlhttp.onreadystatechange = function() {
-//        if (this.readyState == 4 && this.status == 200) {
-//            console.log('Response: ' + this.responseText);
-//        }
-//    };
-//    xmlhttp.open("POST", "saveContacts.php", true);
-//    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//    xmlhttp.send("contacts=" + JSON.stringify(contactArray)); 
+function saveContacts() {
+	console.log("saveContacts()");
+   xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log('Response: ' + this.responseText);
+        }
+    };
+    xmlhttp.open("POST", "saveContacts.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("contacts=" + JSON.stringify(contactArray)); 
 }
 
-loadContactsFromServer() {
-//	console.log("loadContactsFromServer()");
+function loadContactsFromServer() {
+	console.log("loadContactsFromServer()");
 
     // Clear the current contacts.
-//    contactArray.length = 0;
+    contactArray.length = 0;
 
-//    xmlhttp = new XMLHttpRequest();
-//    xmlhttp.onreadystatechange = function() {
-//        if (this.readyState == 4 && this.status == 200) {
-//            contactArray = JSON.parse(this.responseText);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            contactArray = JSON.parse(this.responseText);
 
-//            currentContactIndex = 0;
-//            viewCurrentContact()
-//        }
-//    };
+            currentContactIndex = 0;
+            viewCurrentContact()
+        }
+    };
 
-//    xmlhttp.open("GET", "loadContacts.php", true);
-//    xmlhttp.send();
+    xmlhttp.open("GET", "loadContacts.php", true);
+    xmlhttp.send();
 }
 
 function previous() {
