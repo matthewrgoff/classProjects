@@ -1,0 +1,115 @@
+<!--
+	Matt Goff
+	Web & Distributed Programming
+	Mustang Version 3
+-->
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang Version 3</title>
+        <link rel="stylesheet" href="MustangV3.css">
+        <script src="MustangV3.js"></script>
+    </head>
+	
+    <body onload="initApplication()">  
+        <h1>Mustang Version 3</h1> 
+
+		<button type="button" onclick="viewCurrentContact()">Extract Contacts</button>
+		<button type="button" onclick="loadContactsFromServer()">Load Contacts from Server</button>
+		<button type="button" onclick="saveContacts()">Save Contacts</button>
+
+
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td> 
+					<input id="fNameID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td> 
+					<input id="lNameID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Preferred Name:</td>
+				<td> 
+					<input id="pNameID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td> 
+					<input id="emailID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Phone Number:</td>
+				<td> 
+					<input id="phoneID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>City:</td>
+				<td> 
+					<input id="cityID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>State:</td>
+				<td> 
+					<input id="stateID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Zip Code:</td>
+				<td> 
+					<input id="zipID" type="text" value="" size="40" onblur="zipBlurFunction()" autofocus>
+				</td>
+			</tr>
+			<tr>
+				<td>Latitude:</td>
+				<td> 
+					<input id="latID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Longitude:</td>
+				<td> 
+					<input id="lngID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Favorite Hobby:</td>
+				<td> 
+					<input id="hobbyID" type="text" value="" size="40">
+				</td>
+			</tr>
+			<tr>
+				<td>Seat Location:</td>
+				<td> 
+					<input id="seatID" type="text" value="" size="40">
+				</td>
+			</tr>
+		</table>
+		
+		<br>
+		<button id="btn" type="button" onclick="previous()">Previous</button>
+		<button id="btn2" type="button" onclick="next()">Next</button>
+		<button type="button" onclick="add()">Add Contact</button>
+		<button type="button" onclick="remove()">Remove Contact</button>
+		
+		<br><br>
+		Status Update:<p id="statusUpdateID"></p>
+		
+		<br><hr><br>
+        Index:<p id="indexID"></p>
+		<br><hr><br>
+        Contacts:<p id="contactsID"></p>
+    </body>
+	
+</html>
