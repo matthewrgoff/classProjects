@@ -26,7 +26,7 @@ function viewCurrentContact() {
 
 function saveContacts() {
 	console.log("saveContacts()");
-   xmlhttp = new XMLHttpRequest();
+    xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log('Response: ' + this.responseText);
@@ -94,13 +94,69 @@ function next() {
 }
 
 function add() {
-	//var x = getElementById("");
+	console.log("add()");
 	
-	//x.add();
+	var obj = '{'
+		+ '"firstName": "",'
+		+ '"lastName": "",'
+		+ '"preferredName": "",'
+		+ '"email": "",'
+		+ '"phoneNumber": "",'
+		+ '"city": "",'
+		+ '"state": "",'
+		+ '"zip": "",'
+		+ '"lat": "",'
+		+ '"lng": "",' 
+		+ '"favoriteHobby": "",'
+		+ '"seatLocation": ""'
+		+ '}';
+		
+	var object = JSON.parse(obj);
+	
+	object.firstName = document.getElementById("fNameID").value;
+	object.lastName = document.getElementById("lNameID").value;
+	object.preferredName = document.getElementById("pNameID").value;
+	object.email = document.getElementById("emailID").value;
+	object.phoneNumber = document.getElementById("phoneID").value;
+	object.city = document.getElementById("cityID").value;
+	object.state = document.getElementById("stateID").value;
+	object.zip = document.getElementById("zipID").value;
+	object.lat = document.getElementById("latID").value;
+	object.lng = document.getElementById("lngID").value;
+	object.favoriteHobby = document.getElementById("hobbyID").value;
+	object.seatLocation = document.getElementById("seatID").value;
+	
+	console.log(contactArray.length);
+	
+	contactArray.push(object);
+	
+	console.log(obj);
+	console.log(contactArray.length);
+}
+
+function clearFields() {
+	console.log("clear()");
+	document.getElementById("fNameID").value = "";
+	document.getElementById("lNameID").value = "";
+	document.getElementById("pNameID").value = "";
+	document.getElementById("emailID").value = "";
+	document.getElementById("phoneID").value = "";
+	document.getElementById("cityID").value = "";
+	document.getElementById("stateID").value = "";
+	document.getElementById("zipID").value = "";
+	document.getElementById("latID").value = "";
+	document.getElementById("lngID").value = "";
+	document.getElementById("hobbyID").value = "";
+	document.getElementById("seatID").value = "";
+	console.log(document.getElementById("fNameID").value);
 }
 
 function remove() {
+	console.log("remove()");
 	
+	contactArray.splice(currentContactIndex,1);
+	
+	next();
 }
 
 function zipBlurFunction() {
@@ -129,6 +185,7 @@ function getPlace() {
 
 function initApplication() {
     console.log('Mustang Version 3 Starting!'); 
+	//clear();
 	loadIndex();
 }
 
