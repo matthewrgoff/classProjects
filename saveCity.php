@@ -4,7 +4,12 @@
 	$cityPHP = $_GET['cityPHP'];
 	echo $cityPHP."\n";
 	$cityName = array('city'=>$cityPHP);
-	$toWrite = json_encode($cityName);
+	//$toWrite = json_encode($cityName);
+	$received = file_get_contents('cityJSON.json');
+	$data = json_decode($received,true);
+	$size = sizeof($data);
+	$data[size]=$cityName;
+	$toWrite = json_encode($data);
 	file_put_contents('cityJSON.json', $toWrite);
 	//$myfile = fopen("cityJSON.json", "w") or die("Unable to open file to write!");
 	//$myfile = file_get_contents("cityJSON.json");
