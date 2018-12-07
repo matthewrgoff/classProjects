@@ -34,10 +34,13 @@ function saveCity() {
 	//var newCity = document.getElementById("city").value;
 	var newRequest = new XMLHttpRequest();
 	var newCity = document.getElementById("city").value;
+	console.log(newCity);
 	
 	newRequest.onreadystatechange = function () {
-		//newCity = document.getElementById("city").value;
-		console.log(newRequest.responseText); 
+		if (newRequest.readyState==4 && newRequest.status==200) {
+			//newCity = document.getElementById("city").value;
+			console.log(newRequest.responseText); 
+		}
 	}
 	newRequest.open('GET', 'https://matthewrgoff.azurewebsites.net/saveCity.php?cityPHP='+newCity);
 	newRequest.send();
