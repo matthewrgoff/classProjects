@@ -12,6 +12,6 @@
 	$data[$size]=array('city'=>$cityPHP);
 	$toWrite = json_encode($data);
 	file_put_contents('cityJSON.json', $toWrite);
-    echo "City Saved";
-	
+    echo "City Saved"."\n";
+	echo"The new json file is ".($toWrite);
 ?>
