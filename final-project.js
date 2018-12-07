@@ -31,7 +31,6 @@ function submitCity() {
 
 function saveCity() {
 	console.log("saveCity");
-	//var newCity = document.getElementById("city").value;
 	var newRequest = new XMLHttpRequest();
 	var newCity = document.getElementById("city").value;
 	console.log(newCity);
