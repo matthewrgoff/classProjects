@@ -37,6 +37,7 @@ function saveCity() {
 	
 	newRequest.onreadystatechange = function () {
 		//newCity = document.getElementById("city").value;
+		console.log(newRequest.responseText);
 	}
 	newRequest.open('GET', 'https://matthewrgoff.azurewebsites.net/saveCity.php?cityPHP='+newCity);
 	newRequest.send();
