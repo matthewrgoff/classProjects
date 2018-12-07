@@ -11,11 +11,24 @@
         <meta charset="UTF-8">
         <title>Final Project</title>
         <link rel="stylesheet" href="final-project.css">
-        <script src="final-project.js"></script>
     </head>
 	
-    <body onload="initApplication()">  
-        <h1>Final Project</h1>
+    <body onload="initApplication()">
+	
+        <h1>What's the Weather?</h1>
+		
+		<p>Enter a city where you'd like to see the current forecast.</p>
+		
+		<p>
+			City: <input id="city" size="30" autofocus></input><br><br>
+			<button type="button" onclick="submitCity()">Submit</button>
+			|
+			<button type="button" onclick="saveCity()">Save City</button>
+			
+			<div id="weather-info"></div>
+		</p>
+
+		<script src="final-project.js"></script>
 	</body>
 	
 </html>
