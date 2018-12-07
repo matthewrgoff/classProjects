@@ -29,6 +29,18 @@ function submitCity() {
 	ourRequest.send();
 }
 
+function saveCity() {
+	console.log("saveCity");
+	//var newCity = document.getElementById("city").value;
+	var newRequest = new XMLHttpRequest();
+	
+	xhr.onreadystatechange = function () {
+		var newCity = document.getElementById("city").value;
+	}
+	newRequest.open('GET', 'https://matthewrgoff.azurewebsites.net/saveCity.php?cityPHP='+newCity);
+	newRequest.send();
+}
+
 // formats the json data into a table
 function renderHTML(data) {
 	console.log("renderHTML");
