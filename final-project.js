@@ -1,6 +1,6 @@
 // Matt Goff
 
-var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 var apiKey = '&APPID=7f9eec2b2ce37b631dbff8f10680c0c0&units=imperial';
 var weatherContainer = document.getElementById("weather-info");
 
