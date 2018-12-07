@@ -1,8 +1,8 @@
 <?php
     // Matt Goff
 	
-	$cityPHP = $_GET["newCity"];
-	echo $cityPHP;
+	$cityPHP = $_GET['cityPHP'];
+	echo $cityPHP."\n";
 	$cityName = array('city'=>$cityPHP);
 	$toWrite = json_encode($cityName);
 	file_put_contents('cityJSON.json', $toWrite);
