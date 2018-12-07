@@ -1,6 +1,7 @@
 <?php
     // Matt Goff
 	
+	
 	$cityPHP = $_GET['cityPHP'];
 	echo $cityPHP."\n";
 	//$cityName = array('city'=>$cityPHP);
